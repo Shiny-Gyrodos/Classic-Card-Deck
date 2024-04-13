@@ -48,8 +48,20 @@ public class Card
             CreateDeck();
         }
     }
+    public static void RemoveCardsFromHand() 
+    {
+        foreach (Card card in hand)
+        {
+            hand.Remove(card);
+        }
+    }
     public static void Draw(int howMany)
     {
+        if (handLimit > cardsInDeck)
+        {
+            handLimit == cardsInDeck;
+        }
+
         for (int i = 1; i <= howMany; i++)
         {
             try
