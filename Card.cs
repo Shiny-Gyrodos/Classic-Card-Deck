@@ -59,7 +59,7 @@ public class Card
     {
         if (handLimit > cardsInDeck)
         {
-            handLimit == cardsInDeck;
+            handLimit = cardsInDeck;
         }
 
         for (int i = 1; i <= howMany; i++)
