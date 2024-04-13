@@ -25,17 +25,13 @@ public class Card
             deck.Add(new Card(i, "spades", title[i - 2]));
             deck.Add(new Card(i, "hearts", title[i - 2]));
             deck.Add(new Card(i, "diamonds", title[i - 2]));
-
-            if (i == 10)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    deck.Add(new Card(i, "clubs", royalTitle[j]));
-                    deck.Add(new Card(i, "spades", royalTitle[j]));
-                    deck.Add(new Card(i, "hearts", royalTitle[j]));
-                    deck.Add(new Card(i, "diamonds", royalTitle[j]));
-                }
-            }
+        }
+        for (int j = 0; j < 3; j++)
+        {
+            deck.Add(new Card(10, "clubs", royalTitle[j]));
+            deck.Add(new Card(10, "spades", royalTitle[j]));
+            deck.Add(new Card(10, "hearts", royalTitle[j]));
+            deck.Add(new Card(10, "diamonds", royalTitle[j]));
         }
         cardsInDeck = deck.Count();
     }
