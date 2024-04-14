@@ -5,7 +5,7 @@ Cards created are objects of the Card class.
 
 Some features of this code are:
 1. CreateDeck, EraseDeck, and Draw cards functions.
-2. Customizable hand limit, and draw amount.
+2. Customizable hand limit, draw amount, hand remove amount.
 3. You can acces the card's value (2, 5, 11, etc.), suite (hearts, diamonds, etc.), and name (five, ace, queen, etc.).
 
 Q. Is this code written as efficiently as possible? A. No, but it does function for it's intended purpose, while remaining easily readable.
