@@ -6,7 +6,6 @@ public class Card
     static Random random = new Random();
     public static List<Card> deck = new List<Card>();
     public static List<Card> hand = new List<Card>();
-    static int currentCard = 0;
     static int cardsInDeck;
     public int value; // Parameter 1
     public string suite; // Parameter 2
@@ -46,9 +45,9 @@ public class Card
             CreateDeck();
         }
     }
-    public static void RemoveCardsFromHand(int howMany) 
+    public static void RemoveCardsFromHand(int howmany) 
     {
-        for (int i = 0; i < howMany; i++)
+        for (int i = 0; i < howmany; i++)
         {
             hand.RemoveAt(i);
         }
@@ -64,8 +63,9 @@ public class Card
         {
             if (hand.Count() < handLimit)
             {
-                hand.Add(deck[random.Next(0, cardsInDeck)]);
-                deck.Remove(hand[currentCard]);
+                Card SelectedCard = deck[random.Next(0, cardsInDeck)];
+                hand.Add(SelectedCard);
+                deck.Remove(SelectedCard);
             }
             else
             {
