@@ -1,9 +1,11 @@
+using System.Xml.Linq;
+
 public class Card
 {
     public static int handLimit = 5; // Change when desired
     static Random random = new Random();
     public static List<Card> deck = new List<Card>();
-    public static Card[] hand = new Card[handLimit];
+    public static List<Card> hand = new List<Card>();
     static int currentCard = 0;
     static int cardsInDeck;
     public int value; // Parameter 1
@@ -56,19 +58,18 @@ public class Card
         if (handLimit > cardsInDeck)
         {
             handLimit = cardsInDeck;
-        }
+        }    
 
         for (int i = 1; i <= howMany; i++)
         {
-            try
+            if (hand.Count() < handLimit)
             {
                 hand[currentCard] = deck[random.Next(0, cardsInDeck)];
                 deck.Remove(hand[currentCard]);
-                currentCard++;
             }
-            catch
+            else
             {
-                Console.WriteLine("Hand limit reached");
+                Console.WriteLine("Hand limit reached.");
             }
         }
     }
