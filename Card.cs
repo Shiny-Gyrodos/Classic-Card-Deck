@@ -46,11 +46,11 @@ public class Card
             CreateDeck();
         }
     }
-    public static void RemoveCardsFromHand() 
+    public static void RemoveCardsFromHand(int howMany) 
     {
-        foreach (Card card in hand)
+        for (int i = 0; i < howMany; i++)
         {
-            hand.Remove(card);
+            hand.RemoveAt(i);
         }
     }
     public static void Draw(int howMany)
@@ -64,7 +64,7 @@ public class Card
         {
             if (hand.Count() < handLimit)
             {
-                hand[currentCard] = deck[random.Next(0, cardsInDeck)];
+                hand.Add(deck[random.Next(0, cardsInDeck)]);
                 deck.Remove(hand[currentCard]);
             }
             else
