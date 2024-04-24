@@ -10,6 +10,6 @@ Some features of this code are:
 
 Q. Is this code written as efficiently as possible? A. No, but it does function for it's intended purpose, while remaining easily readable.
 Q. How much room is there for easy customization? A. Quite a lot, you can't simulate non-classical decks with it though.
-Q. Does the deck include joker cards? A. No, however joker support may be added in the future.
+Q. Does the deck include joker cards? A. No, jokers are dumb.
 
 Thanks for checking out my dumb stuff.
